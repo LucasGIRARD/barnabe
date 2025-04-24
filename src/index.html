@@ -326,22 +326,66 @@
         	<footer>
         		<h3>Booking/Contact</h3>
         		<div class="pure-g">
-        			<div class="pure-u-1-1 pure-u-md-1-2">
+        			<div class="pure-u-1-1 pure-u-1">
         				<p>N’hésitez pas à contacter l’équipe de Barnabé - l’Apéro van, nous sommes à votre écoute pour vous conseiller et vous servir lors de votre futur événement.</p>
         				<br>
-        				mail : <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;">&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;</a>
-        				<br>
-        				<br>
-        				Téléphone : <a href="tel:&#048;&#054;&#051;&#051;&#056;&#056;&#054;&#051;&#048;&#048;">&#048;&#054;.&#051;&#051;.&#056;&#056;.&#054;&#051;.&#048;&#048;</a>
+        				<div class="pure-g">
+        				<div class="pure-u-1-1 pure-u-md-1-2">
+        					mail : <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;">&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;</a>
+        				</div>
+        				<div class="pure-u-1-1 pure-u-md-1-2">
+        					Téléphone : <a href="tel:&#048;&#054;&#051;&#051;&#056;&#056;&#054;&#051;&#048;&#048;">&#048;&#054;.&#051;&#051;.&#056;&#056;.&#054;&#051;.&#048;&#048;</a>
+        				</div>
+        				
         			</div>
-        			<div class="pure-u-1-1 pure-u-md-1-2">
+        			<br>
+        			</div>
+        			<div class="pure-u-1-1">
         				<form id="formContact" class="pure-form pure-form-stacked" action="email.php" method="POST">
 
-
+<select class="notSet">
+	<option selected disabled>Vous êtes ?</option>
+	<option >Un particulier</option>
+	<option >Une entreprise</option>
+	<option >Une collectivité territoriale</option>
+	<option >Une association</option>
+	</select>
         					<input id="nom" name="nom" type="text" placeholder="Nom">
         					<input id="tel" name="tel" type="tel" placeholder="Téléphone">
         					<input id="email" name="email" type="email" placeholder="Email">
+
+        					<hr>
+
+
+        					<select class="notSet">
+        						<option selected disabled>Type d'événement</option>
+        						<option >Mariage</option>
+        						<option >Baptême/Communion</option>
+        						<option >Anniversaire</option>
+        						<option >Evénement d'entreprise</option>
+        						<option >Autre</option>
+        					</select>
+        					<input id="nombreDePersonnes" name="nombreDePersonnes" type="text" placeholder="Nombre de personnes">
+        					<input id="lieuDeLEvenement" name="lieuDeLEvenement" type="text" placeholder="Lieu de l'événement">
         					<textarea id="demande" name="demande" placeholder="Votre demande" rows="5"></textarea>
+
+<hr>
+
+        					<select class="notSet">
+        						<option selected value="" disabled>Vous nous avez connu</option>
+        						
+        						<option>Le bouche à oreille</option>
+        						<option>Les réseaux sociaux</option>
+        						<option>Une recommandation d'un lieu de mariage</option>
+        						<option>Moteur de recherche Google</option>
+        						<option>Site web barnabe-aperovan.fr</option>
+        						<option>Site web mariages.net</option>
+        						<option>Le Wedding Magazine</option>
+        						<option>Le salon du mariage</option>
+        						<option>Le flyer entreprise</option>
+        						
+        						<option value="J'ai déjà bu des coups avec Barnabé l'Apéro Van!">J'ai déjà bu des coups avec Barnabé l'Apéro Van!</option>
+        					</select>
 
         					<label for="obligation1" class="pure-checkbox text-small">
         						<input id="obligation1" name="obligation[]" type="checkbox" value="Vous acceptez de recevoir les dernières informations sur Barnabe"> Vous acceptez de recevoir les dernières informations sur Barnabe
@@ -357,11 +401,10 @@
         						<button id="sendFormContact" type="submit" class="pure-button button-success pure-button-primary">Envoyer</button>
         					</div>
 
-        					<p id="confirmation" class="center hidden-opacity text-small">Votre message a bien été envoyé.<br>Nous vous répondrons dans les plus bref délais.</p>
-
         					<input id="obligation0" type="checkbox" hidden value="Vous reconnaissez avoir pris connaissance de notre Politique de confidentialité. Vous pouvez vous désinscrire à tout moment en nous contactant à l'adresse &#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;"> <p class="text-small">Vous reconnaissez avoir pris connaissance de notre Politique de confidentialité. Vous pouvez vous désinscrire à tout moment en nous contactant à l'adresse &#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#098;&#097;&#114;&#110;&#097;&#098;&#101;&#045;&#097;&#112;&#101;&#114;&#111;&#118;&#097;&#110;&#046;&#102;&#114;</p>
 
         				</form>
+        				<a id="confirmation-btn" href="#confirmation" data-modal-open></a>
         			</div>
         		</div>
         		<ul class="inline">
@@ -389,7 +432,13 @@
         	</div>
         </footer>
     </section>
-
+<div id="confirmation" data-modal>
+    	<div data-modal-document>
+    		<h3>Merci !</h3>
+    		<div>
+    			<p class="center">Votre message a bien été envoyé.<br><br>Nous vous répondrons dans les plus bref délais.</p>
+    		</div>
+    	</div>
     <div id="mentions" data-modal>
     	<div data-modal-document>
     		<h3>MENTIONS LÉGALES</h3>

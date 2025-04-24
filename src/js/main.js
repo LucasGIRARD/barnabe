@@ -207,7 +207,8 @@ function sendConcat() {
 	requestContact.onreadystatechange = function(e,data) {
 		if(requestContact.readyState === 4 && requestContact.status === 200) {
 			if (requestContact.responseText == 0) {
-				document.getElementById("confirmation").className = document.getElementById("confirmation").className.replace('hidden-opacity','');
+				//document.getElementById("confirmation").className = document.getElementById("confirmation").className.replace('hidden-opacity','');
+				document.getElementById("confirmation__trigger-A").click();
 			} else {
 
 			}

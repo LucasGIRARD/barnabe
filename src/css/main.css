@@ -76,6 +76,19 @@ p {
   font-family: 'TradeGothicLTStd';
 }
 
+hr {
+      border: 0.5px rgb(81, 101, 103) solid;
+    margin: 20px 10%;
+}
+
+select {
+  width: 100%;
+}
+
+select.notSet {
+  color: rgb(117, 117, 117);
+}
+
 .pure-g [class*=pure-u] {
   font-family: 'TradeGothicLTStd';
 }
@@ -83,6 +96,10 @@ p {
 @media (min-width: 768px) {
   h3 {
     font-size: 30px;
+  }
+
+  body {
+    font-size: 20px;
   }
 }
 
@@ -590,7 +607,7 @@ footer {
 }
 
 #confirmation {
-  color: #5eb95e;
+  //color: #5eb95e;
 }
 
 #confirmation.hidden-opacity {
