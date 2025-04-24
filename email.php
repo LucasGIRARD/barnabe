@@ -13,6 +13,8 @@ if (isset($_POST['nom']) && isset($_POST['tel']) && isset($_POST['email']) && is
 
 	if ($resp->isSuccess()) {
 
+		$ip = $_SERVER['REMOTE_ADDR'];
+
 		$consentement = "";
 		if (isset($_POST['obligation'])) {
 			if (count($_POST['obligation']) > 1) {
@@ -33,7 +35,7 @@ if (isset($_POST['nom']) && isset($_POST['tel']) && isset($_POST['email']) && is
 		$from = "siteweb@barnabe-aperovan.fr";
 
 		$subject = 'Prise de contact : '.$_POST['nom'];
-		$message = '<br><br><br><br>Nom: '.$_POST['nom'].'<br><br>Tel: '.$_POST['tel'].'<br><br>Adresse Email: '.$_POST['email'].'<br><br>Demande: '.$_POST['demande'].'<br><br><br><br>Consentement:<br>'.$consentement;
+		$message = '<br><br><br><br>Nom: '.$_POST['nom'].'<br><br>Tel: '.$_POST['tel'].'<br><br>Adresse Email: '.$_POST['email'].'<br><br>Demande: '.$_POST['demande'].'<br><br><br><br>Consentement:<br>'.$consentement.'<br>Ip'.$ip;
 
 		// Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
 		$headers = "MIME-Version: 1.0\r\n";
