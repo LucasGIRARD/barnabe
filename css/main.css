@@ -1,0 +1,398 @@
+/* ********************************* GLOBAL ********************************* */
+body {
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+h2, h3, h4 {
+    color: rgb(81, 101, 103);
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+p {
+  font-family: 'Trade Gothic LT Std Regular';
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+/* ********************************* GLOBAL CLASS ********************************* */
+
+.verticalCenter {
+    display: table;
+    height: 100%;
+    margin: auto;
+}
+
+
+.verticalCenter > div {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.pure-img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.bgimage {
+   background-size: cover;
+   background-position: 50%;
+   min-height: 25vw;
+   height: 40vh;
+}
+
+/* ********************************* LOGO ********************************* */
+
+#logo-container {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+    padding: 10px;
+    padding-bottom: 0px;
+    transition: all 0.2s ease-out;
+}
+
+#logo {
+    height: 30vh;
+    max-width: 80vw;
+    transition: all .3s ease;
+}
+
+/* ********************************* MENU ********************************* */
+#menu {
+   background-color: rgba(255, 255, 255, 0.9);
+   margin-left: -220px; /* "#menu" width */
+   width: 220px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   z-index: 1; /* so the menu or its navicon stays above all content */
+   overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+   text-align: center;
+}
+
+#menu a {
+    padding: 10px;
+    color: #BBB;
+}
+
+#menu a:hover,
+#menu a:focus,
+#menu .pure-menu-selected a {
+    color: #777;
+    background-color: transparent;
+}
+
+
+
+
+#menu, .menu-link {
+    transition: all 0.2s ease-out;
+}
+
+@media (min-width: 1050px) {
+
+    #menu {
+        box-sizing: border-box;
+        margin-left: 0px;
+        bottom: unset;
+        width: 100%;
+        padding: 10px 0px;
+        margin-top: 16px;
+    }
+
+    #layout.active .menu-link {
+        left: 220px;
+    }
+
+    .pure-md-menu-horizontal {
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .pure-md-menu-horizontal .pure-menu-list {
+        display: inline-block;
+    }
+
+    .pure-md-menu-horizontal .pure-menu-item {
+        display: inline-block;
+        zoom: 1;
+        vertical-align: middle;
+    }
+}
+
+
+
+/* ********************************* MENU MOBILE ********************************* */
+
+.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 10px;
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2.1em 1.6em;
+}
+
+.menu-link span {
+    position: relative;
+    display: block;
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
+
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menu-link span:after {
+    margin-top: 0.6em;
+}
+
+@media (min-width: 1050px) {
+    .menu-link {
+        position: fixed;
+        left: 220px;
+        display: none;
+    }
+}
+
+@media (max-width: 1050px) {
+  #menu {
+    background-color: rgb(81, 101, 103);
+  }
+}
+
+
+
+/* ********************************* STRUCTURE ********************************* */
+
+#main {
+    padding-top: 75px;
+}
+
+#layout {
+    position: relative;
+    left: 0;
+    padding-left: 0;
+    padding-top: 30vh;
+}
+#layout.active #menu {
+    left: 220px;
+    width: 220px;
+    top: 0;
+}
+
+#layout.active .menu-link {
+    left: 220px;
+}
+
+@media (max-width: 1050px) {
+    #layout.active {
+        position: relative;
+        left: 220px;
+    }
+
+    #logo-container.active {
+        left: 220px;
+    }
+}
+
+.content-width {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    line-height: 1.6em;
+}
+
+/* ********************************* HEADER ********************************* */
+
+#header {
+    padding: 20px;
+    text-align: center;
+    background-image: url("../img/volkswagen-569315_1920.jpg");
+}
+
+#header h2 {
+    display: inline-block;
+    padding: 4px 20px;
+    margin: 0;
+    margin-top: 80px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border:1px solid transparent;
+    //border-radius: 10px;
+    //box-shadow: 12px 12px 2px 1px rgba(81, 101, 103, 0.6);
+}
+
+@media (max-width: 1050px) {
+    #header h2 {
+        padding: 4px;
+        font-size: 34px;
+    }
+}
+
+/* ********************************* CONCEPT ********************************* */
+/* ********************************* CHIFFRE ********************************* */
+
+.pictos {
+    margin: 0 20px;
+}
+
+.pictos .border {
+    border-radius: 100px;
+    border: 3px solid #000000;
+    padding: 18px;
+    //margin: 10px;
+    margin: 8%;
+    display: inline-block;
+    position: relative;
+}
+
+.pictos .border:before {
+  background: none;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  pointer-events: none;
+}
+
+.pictos svg {
+    width: 100%;
+}
+
+/* ********************************* EVENT ********************************* */
+
+.images-sliced {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 50vw;
+}
+.images-sliced > div, .images-sliced img {
+  width: 100%;
+  height: 100%;
+}
+.images-sliced > div {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 0,593749667rad = 34.01935deg 
+   * 90deg - 34.01935deg = 55.98065deg
+   */
+   //transform: skewX(-55.98deg);
+   transform: skewX(-63.44deg);
+}
+.images-sliced > div:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.images-sliced > div:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.images-sliced img, .images-sliced > div:after {
+  transform: skewX(63.44deg);
+  transform-origin: inherit;
+}
+.images-sliced > div:after {
+  position: absolute;
+  margin: .5em 1.65em;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  font-size: 22px;
+  padding: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-info);
+}
+.images-sliced > div:first-child:after { top: 0; left: 0; }
+.images-sliced > div:last-child:after { right: 0; bottom: 0; }
+
+/* ********************************* PRESTATION ********************************* */
+
+#prestation table {
+    margin: auto;
+    border-collapse: separate;
+}
+
+#prestation th {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px 20px;
+    color: #FFF;
+    text-transform: uppercase;
+    background: rgb(81, 101, 103);
+}
+
+#prestation td {
+    padding: 10px 20px;
+    background-color: #FFF;
+    border-bottom: 1px solid #ccc;
+}
+
+/* ********************************* CUSTOM ********************************* */
+/* ********************************* PRODUIT ********************************* */
+/* ********************************* GALERIE ********************************* */
+/* ********************************* AGENDA ********************************* */
+/* ********************************* CONTACT ********************************* */
+
+@font-face {
+  font-family: 'Bastard';
+  src:  url('Bastard.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+footer {
+    background-image: url("../img/abstract-antique-backdrop-129731.jpg");
+    background-position: 50% 100%;
+    background-size: 100%;
+    padding: 0px 10px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+    color: #222;
+    //font-family: 'Bastard';
+}
+
+footer h3, footer a {
+    color: #222;
+}
