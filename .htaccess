@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.barnabe-aperovan.fr$
+RewriteRule ^(.*)$ https://www.barnabe-aperovan.fr/$1 [R=301,L]
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^(.*)$ https://www.barnabe-aperovan.fr/$1 [R=301,L]
